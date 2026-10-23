@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/person5"
+            android:layout_marginTop="20dp" />
+
+        <!-- Driver Name -->
+        <TextView
+            android:id="@+id/profileFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juan Dela Cruz"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Online Status -->
+        <TextView
+            android:id="@+id/profileStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Online"
+            android:textColor="#32CD32"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Editable Fields Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#E1F3FF"
+            android:elevation="6dp">
+
+            <EditText
+                android:id="@+id/editFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name" />
+
+            <EditText
+                android:id="@+id/editDriverID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Driver ID" />
+
+            <EditText
+                android:id="@+id/editContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number" />
+
+            <EditText
+                android:id="@+id/editEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address" />
+
+            <EditText
+                android:id="@+id/editVehicleType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Type" />
+
+            <EditText
+                android:id="@+id/editLicensePlate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="License Plate Number" />
+
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attached Documents"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Document Buttons -->
+        <Button
+            android:id="@+id/btnLicense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#673AB7"
+            android:textColor="#FFFFFF"
+            android:text="DRIVER'S LICENSE"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnOwnership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#673AB7"
+            android:textColor="#FFFFFF"
+            android:text="MOTORCYCLE OWNERSHIP"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnPlatePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#673AB7"
+            android:textColor="#FFFFFF"
+            android:text="PLATE NUMBER PHOTO"
+            android:layout_marginBottom="20dp" />
+
+
+        <!-- Save and Cancel -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:text="SAVE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1DA1F2"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/red_button_box"
+            android:text="CANCEL"
+            android:textColor="#E9E1E1"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

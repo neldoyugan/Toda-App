@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="22dp">
+
+        <!-- PROFILE IMAGE -->
+        <ImageView
+            android:id="@+id/imgDriverProfile"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/person5"
+            android:background="@drawable/profile_circle"
+            android:padding="10dp"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="35dp" />
+
+        <!-- Name Display -->
+        <TextView
+            android:id="@+id/tvFullNameDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juan Dela Cruz"
+            android:textColor="#0B0A0A"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_marginTop="10dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Online"
+            android:textColor="#117123"
+            android:textSize="14sp"
+            android:layout_marginBottom="22dp" />
+
+        <!-- INFORMATION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            android:elevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="Full Name"
+                android:padding="10dp"
+                android:enabled="false"/>
+
+            <!-- Driver ID -->
+            <EditText
+                android:id="@+id/tvDriverID"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="Driver ID"
+                android:padding="10dp"
+                android:enabled="false"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Contact -->
+            <EditText
+                android:id="@+id/tvContact"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="Contact Number"
+                android:padding="10dp"
+                android:enabled="false"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="Email Address"
+                android:padding="10dp"
+                android:enabled="false"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Vehicle Type -->
+            <EditText
+                android:id="@+id/tvVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="Vehicle Type"
+                android:padding="10dp"
+                android:enabled="false"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Plate Number -->
+            <EditText
+                android:id="@+id/tvPlate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/input_field"
+                android:hint="License Plate Number"
+                android:padding="10dp"
+                android:enabled="false"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attached Documents"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#0F0D0D"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Document Buttons -->
+        <Button
+            android:id="@+id/btnViewLicense"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Driver's License"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnViewOwnership"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Motorcycle Ownership"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="6dp" />
+
+        <Button
+            android:id="@+id/btnViewPlatePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Plate Number Photo"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="6dp" />
+
+        <!-- Control Buttons -->
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="EDIT PROFILE"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="18dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="LOGOUT"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

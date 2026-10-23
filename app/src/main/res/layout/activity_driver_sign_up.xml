@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <!-- Logo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="45dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/toda1"
+                android:scaleType="centerCrop"
+                android:contentDescription="Maribojoc TODA Logo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Registration"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Maribojoc TODA as a Driver"
+            android:textSize="14sp"
+            android:textColor="#546E7A"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Personal Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#FAFFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤  Driver Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Full Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    app:hintTextColor="#1565C0"
+                    app:boxBackgroundMode="filled"
+                    app:boxBackgroundColor="#F0F4FF"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etfullNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:textColor="#000000"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Driver ID + Contact (side by side) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Driver ID"
+                        android:layout_marginEnd="6dp"
+                        app:hintTextColor="#1565C0"
+                        app:boxBackgroundMode="filled"
+                        app:boxBackgroundColor="#F0F4FF"
+                        app:boxStrokeColor="#1565C0"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etdriverIdInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Contact No."
+                        android:layout_marginStart="6dp"
+                        app:hintTextColor="#1565C0"
+                        app:boxBackgroundMode="filled"
+                        app:boxBackgroundColor="#F0F4FF"
+                        app:boxStrokeColor="#1565C0"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etcontactNumberInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:inputType="phone"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    app:hintTextColor="#1565C0"
+                    app:boxBackgroundMode="filled"
+                    app:boxBackgroundColor="#F0F4FF"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etemailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password + Confirm -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="#1565C0"
+                    app:boxBackgroundMode="filled"
+                    app:boxBackgroundColor="#F0F4FF"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etpasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:inputType="textPassword"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="#1565C0"
+                    app:boxBackgroundMode="filled"
+                    app:boxBackgroundColor="#F0F4FF"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    android:layout_marginBottom="4dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etconfirmPasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:inputType="textPassword"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Vehicle Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="#111F35">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛵  Vehicle Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF6B35"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Vehicle Type + Plate side by side -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Vehicle Type"
+                        android:layout_marginEnd="6dp"
+                        app:hintTextColor="#FF6B35"
+                        app:boxBackgroundMode="outline"
+                        app:boxBackgroundColor="#0A1422"
+                        app:boxStrokeColor="#4D6080"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etvehicleTypeInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:inputType="text"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#4D6080" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="License Plate"
+                        android:layout_marginStart="6dp"
+                        app:hintTextColor="#FF6B35"
+                        app:boxBackgroundMode="outline"
+                        app:boxBackgroundColor="#0A1422"
+                        app:boxStrokeColor="#4D6080"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etlicensePlateInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:inputType="textCapCharacters"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#4D6080" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Attach Documents Section -->
+                <TextView
+                    android:id="@+id/tvAttachTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📎  Required Documents"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#FF6B35"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- License Button + Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+                    <Button
+                        android:id="@+id/btnAttachLicense"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="📄  Attach Driver's License"
+                        android:background="@drawable/btn_upload_outline"
+                        android:textColor="#FF6B35"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tvLicenseStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No file chosen"
+                        android:textSize="11sp"
+                        android:textColor="#4D6080"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <!-- Ownership Button + Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp">
+                    <Button
+                        android:id="@+id/btnAttachOwnership"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="📄  Attach Motorcycle Ownership"
+                        android:background="@drawable/btn_upload_outline"
+                        android:textColor="#FF6B35"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tvOwnershipStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No file chosen"
+                        android:textSize="11sp"
+                        android:textColor="#4D6080"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <!-- Plate Photo Button + Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="4dp">
+                    <Button
+                        android:id="@+id/btnAttachPlate"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="📄  Attach Plate Number Photo"
+                        android:background="@drawable/btn_upload_outline"
+                        android:textColor="#FF6B35"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tvPlateStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No file chosen"
+                        android:textSize="11sp"
+                        android:textColor="#4D6080"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btnsignUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Register as Driver 🛵"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button_primary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Back to Login -->
+        <TextView
+            android:id="@+id/tvBackToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Sign In"
+            android:textSize="14sp"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+</ScrollView>

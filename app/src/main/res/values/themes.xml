@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODA Premium Dark Theme -->
+    <style name="Theme.Toda" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color: Electric Teal -->
+        <item name="colorPrimary">@color/primary_teal</item>
+        <item name="colorPrimaryVariant">@color/bg_surface</item>
+        <item name="colorOnPrimary">@color/bg_deep</item>
+        <!-- Secondary: Orange accent -->
+        <item name="colorSecondary">@color/accent_orange</item>
+        <item name="colorSecondaryVariant">@color/accent_orange_light</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background system -->
+        <item name="android:colorBackground">@color/bg_deep</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <!-- Status bar: deep navy -->
+        <item name="android:statusBarColor">@color/bg_deep</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/bg_deep</item>
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <!-- Input fields -->
+        <item name="colorControlHighlight">@color/glass_teal_10</item>
+        <item name="colorControlActivated">@color/primary_teal</item>
+        <item name="colorControlNormal">@color/text_hint</item>
+        <!-- TextInputLayout -->
+        <item name="textInputStyle">@style/TodaInputStyle</item>
+    </style>
+
+    <style name="TodaInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg_input</item>
+        <item name="boxStrokeColor">@color/text_hint</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/primary_teal</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <style name="TodaButton.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary_teal</item>
+        <item name="android:textColor">@color/bg_deep</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="TodaButton.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_teal</item>
+        <item name="android:textColor">@color/primary_teal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+</resources>

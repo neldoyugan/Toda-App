@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodaApp</string>
+
+    <string-array name="passenger_options">
+        <item>1 Passenger</item>
+        <item>2 Passengers</item>
+        <item>3 Passengers</item>
+        <item>4 Passengers</item>
+    </string-array>
+
+    <string name="toda">Toda</string>
+    <string name="profile_picture">Profile picture</string>
+
+    <string name="current_ride">Current Ride</string>
+    <string name="destination">Destination:</string>
+    <string name="estimated_time">Estimated Time:</string>
+    <string name="estimated_fare">Fare:</string>
+    <string name="passenger_count">Passengers: 0</string>
+    <string name="hint_message">Message...</string>
+
+
+</resources>
